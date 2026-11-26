@@ -1,0 +1,23 @@
+{
+  "Сочи": {
+    "calm": false,
+    "rocket-danger": false,
+    "drone-danger": true,
+    "rocket-attack": false,
+    "drone-attack": false
+  },
+  "Туапсе": {
+    "calm": false,
+    "rocket-danger": false,
+    "drone-danger": false,
+    "rocket-attack": false,
+    "drone-attack": true
+  },
+  "Краснодарский край": {
+    "calm": true,
+    "rocket-danger": false,
+    "drone-danger": false,
+    "rocket-attack": false,
+    "drone-attack": false
+  }
+}
