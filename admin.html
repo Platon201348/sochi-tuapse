@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ панель - Оповещения Сочи и Туапсе</title>
+    <meta name="description" content="Экстренная информация Сочи и Туапсе">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" href="css.css">
+
+    <script>
+        if (sessionStorage.getItem('adminPanelAuthorized') !== 'yes') {
+            var password = null;
+            try {
+                password = window.prompt('Введите пароль для доступа к админ-панели');
+            } catch (error) {
+                window.location.replace('index.html');
+            }
+            if (password !== 'admin') {
+                window.location.replace('index.html');
+            } else {
+                sessionStorage.setItem('adminPanelAuthorized', 'yes');
+            }
+        }
+    </script>
+
+        <link rel="shortcut icon" type="image/x-icon" href="img.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="180x180.png">
+
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Оповещения</h1>
+            <p class="tagline">Тексты и аудиозаписи оповещений</p>
+        </header>
+
+        <main>
+            <section class="content-area">
+                <h2>Сочи</h2>
+
+                <h3>Тексты</h3>
+
+                <h4>Атака</h4>
+
+                <p class="guide-text">Уважаемые жители и гости города-курорта Сочи. На территории города введён режим атаки беспилотных летательных аппаратов. Если вы в здании, отойдите от окон, укройтесь в помещении без остекления. Если вы на улице, пройдите в ближайшее здание или подземный переход. Если вы в транспорте, немедленно выйдите из транспорта, укройтесь в ближайшем паркинге или в складках местности. Если вы заметили БПЛА или его обломки, немедленно звоните сто двенадцать!</p>
+
+                <h4>Учебные</h4>
+
+                <p class="guide-text">Уважаемые жители и гости города-курорта Сочи. Сегодня с восьми ноль ноль до двадцати трёх ноль ноль в акватории морского порта будут проводиться учебные стрельбы. Просим сохранять спокойствие. Отработка действий военными — залог нашей с вами безопасности.</p>
+
+                <h3>Аудио</h3>
+
+                <div class="admin-audio">
+                    <section>
+                        <h4>Атака</h4>
+                        <audio controls>
+                            <source src="ataka_sochi.mp3" type="audio/mpeg">
+                        </audio>
+                    </section>
+
+                    <section>
+                        <h4>Учебные</h4>
+                        <audio controls>
+                            <source src="uchebnie_sochi.mp3" type="audio/mpeg">
+                        </audio>
+                    </section>
+                </div>
+            </section>
+
+            <section class="content-area">
+                <h2>Туапсе</h2>
+                <h3>Атака</h3>
+                <p class="guide-text">Уважаемые жители и гости города Туапсе. На территории города введён режим атаки беспилотных летательных аппаратов. Если вы в здании, отойдите от окон, укройтесь в помещении без остекления. Если вы на улице, пройдите в ближайшее здание или подземный переход. Если вы в транспорте, немедленно выйдите из транспорта, укройтесь в ближайшем паркинге или в складках местности. Если вы заметили БПЛА или его обломки, немедленно звоните сто двенадцать!</p>
+                <h3>Учебные</h3>
+                <p class="guide-text">Уважаемые жители и гости города Туапсе. Сегодня с восьми ноль ноль до двадцати трёх ноль ноль в акватории морского порта будут проводиться учебные стрельбы. Просим сохранять спокойствие. Отработка действий военными — залог нашей с вами безопасности.</p>
+                <h3>Аудио</h3>
+                <div class="admin-audio">
+                    <section>
+                        <h4>Атака</h4>
+                        <audio controls>
+                            <source src="ataka_tuapse.mp3" type="audio/mpeg">
+                        </audio>
+                    </section>
+                    <section>
+                        <h4>Учебные</h4>
+                        <audio controls>
+                            <source src="uchebnie_tuapse.mp3" type="audio/mpeg">
+                        </audio>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+</body>
+</html>
